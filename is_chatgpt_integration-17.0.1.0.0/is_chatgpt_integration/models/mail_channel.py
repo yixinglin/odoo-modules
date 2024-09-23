@@ -105,7 +105,7 @@ class Channel(models.Model):
     def _get_chatgpt_response(self, messages, temperature):
         ICP = self.env['ir.config_parameter'].sudo()
         api_key = ICP.get_param('is_chatgpt_integration.openapi_api_key')
-        gpt_model_id = ICP.get_param('is_chatgpt_integration.chatgp_model')
+        gpt_model_id = ICP.get_param('is_chatgpt_integration.chatgpt_model')
         gpt_model = 'gpt-3.5-turbo'
         try:
             if gpt_model_id:
